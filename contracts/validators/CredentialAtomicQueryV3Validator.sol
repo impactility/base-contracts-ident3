@@ -136,10 +136,10 @@ contract CredentialAtomicQueryV3Validator is CredentialAtomicQueryValidatorBase 
             "Query hash does not match the requested one"
         );
 
-        _checkAllowedIssuers(signals.issuerID, credAtomicQuery.allowedIssuers);
-        _checkClaimIssuanceState(signals.issuerID, signals.issuerState);
-        _checkClaimNonRevState(signals.issuerID, signals.issuerClaimNonRevState);
-        _checkProofExpiration(signals.timestamp);
+        //_checkAllowedIssuers(signals.issuerID, credAtomicQuery.allowedIssuers);
+        //_checkClaimIssuanceState(signals.issuerID, signals.issuerState);
+        //_checkClaimNonRevState(signals.issuerID, signals.issuerClaimNonRevState);
+        //_checkProofExpiration(signals.timestamp);
 
         _checkLinkID(credAtomicQuery.groupID, signals.linkID);
         _checkProofType(credAtomicQuery.proofType, signals.proofType);

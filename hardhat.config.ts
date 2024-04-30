@@ -89,6 +89,12 @@ const config: HardhatUserConfig = {
     //     },
     //   },
     // },
+    cdk: {
+      chainId: 10101,
+      url: "http://localhost:58404",
+      accounts: [`0x12d7de8621a77640c9241b2595ba78ce443d05e94090365ab3bb5e19df82c625`],
+      timeout: 600_000,
+    },
     localhost: {
       url: "http://127.0.0.1:8545",
       accounts: {

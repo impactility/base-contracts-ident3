@@ -1,4 +1,5 @@
 export const chainIdDefaultIdTypeMap = new Map()
+  .set(10101, "0x02F1") // cdk
   .set(31337, "0x0212") // hardhat
   .set(1101, "0x0231") // zkEVM
   .set(1442, "0x0232") // zkEVM testnet

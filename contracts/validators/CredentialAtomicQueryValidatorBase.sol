@@ -61,7 +61,7 @@ abstract contract CredentialAtomicQueryValidatorBase is
 
     function version() public pure virtual returns (string memory);
 
-    function setRevocationStateExpirationTimeout(
+    /*function setRevocationStateExpirationTimeout(
         uint256 expirationTimeout
     ) public virtual onlyOwner {
         _getCredentialAtomicQueryValidatorBaseStorage()
@@ -95,7 +95,7 @@ abstract contract CredentialAtomicQueryValidatorBase is
 
     function getStateAddress() public view virtual returns (address) {
         return address(_getCredentialAtomicQueryValidatorBaseStorage().state);
-    }
+    }*/
 
     function verify(
         uint256[] calldata inputs,
@@ -138,7 +138,7 @@ abstract contract CredentialAtomicQueryValidatorBase is
         }
     }
 
-    function _checkClaimIssuanceState(uint256 _id, uint256 _state) internal view {
+    /*function _checkClaimIssuanceState(uint256 _id, uint256 _state) internal view {
         bool isStateGenesis = GenesisUtils.isGenesisState(_id, _state);
 
         if (!isStateGenesis) {
@@ -147,9 +147,9 @@ abstract contract CredentialAtomicQueryValidatorBase is
                 .getStateInfoByIdAndState(_id, _state);
             require(_id == stateInfo.id, "State doesn't exist in state contract");
         }
-    }
+    }*/
 
-    function _checkClaimNonRevState(uint256 _id, uint256 _claimNonRevState) internal view {
+    /*function _checkClaimNonRevState(uint256 _id, uint256 _claimNonRevState) internal view {
         CredentialAtomicQueryValidatorBaseStorage
             storage s = _getCredentialAtomicQueryValidatorBaseStorage();
 
@@ -187,9 +187,9 @@ abstract contract CredentialAtomicQueryValidatorBase is
                 }
             }
         }
-    }
+    }*/
 
-    function _checkProofExpiration(uint256 _proofGenerationTimestamp) internal view {
+    /*function _checkProofExpiration(uint256 _proofGenerationTimestamp) internal view {
         if (_proofGenerationTimestamp > block.timestamp) {
             revert("Proof generated in the future is not valid");
         }
@@ -199,9 +199,9 @@ abstract contract CredentialAtomicQueryValidatorBase is
         ) {
             revert("Generated proof is outdated");
         }
-    }
+    }*/
 
-    function _checkAllowedIssuers(uint256 issuerId, uint256[] memory allowedIssuers) internal pure {
+    /*function _checkAllowedIssuers(uint256 issuerId, uint256[] memory allowedIssuers) internal pure {
         // empty array is 'allow all' equivalent - ['*']
         if (allowedIssuers.length == 0) {
             return;
@@ -214,7 +214,7 @@ abstract contract CredentialAtomicQueryValidatorBase is
         }
 
         revert("Issuer is not on the Allowed Issuers list");
-    }
+    }*/
 
     function _checkChallenge(uint256 challenge, address sender) internal pure {
         require(

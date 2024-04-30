@@ -77,10 +77,10 @@ abstract contract CredentialAtomicQueryV2ValidatorBase is CredentialAtomicQueryV
 
         _checkMerklized(signals.merklized, credAtomicQuery.claimPathKey);
         _checkGistRoot(signals.gistRoot);
-        _checkAllowedIssuers(signals.issuerID, credAtomicQuery.allowedIssuers);
-        _checkClaimIssuanceState(signals.issuerID, signals.issuerState);
-        _checkClaimNonRevState(signals.issuerID, signals.issuerClaimNonRevState);
-        _checkProofExpiration(signals.timestamp);
+        //_checkAllowedIssuers(signals.issuerID, credAtomicQuery.allowedIssuers);
+        //_checkClaimIssuanceState(signals.issuerID, signals.issuerState);
+        //_checkClaimNonRevState(signals.issuerID, signals.issuerClaimNonRevState);
+        //_checkProofExpiration(signals.timestamp);
         _checkIsRevocationChecked(
             signals.isRevocationChecked,
             credAtomicQuery.skipClaimRevocationCheck

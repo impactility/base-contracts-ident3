@@ -201,7 +201,7 @@ contract State is Ownable2StepUpgradeable, IState {
      * @param length length of the state history
      * @return A list of state infos of the identity
      */
-    function getStateInfoHistoryById(
+    /*function getStateInfoHistoryById(
         uint256 id,
         uint256 startIndex,
         uint256 length
@@ -216,7 +216,7 @@ contract State is Ownable2StepUpgradeable, IState {
             result[i] = _stateEntryInfoAdapter(stateInfos[i]);
         }
         return result;
-    }
+    }*/
 
     /**
      * @dev Retrieve state information by id and state.
@@ -276,12 +276,12 @@ contract State is Ownable2StepUpgradeable, IState {
      * @param timestamp Blockchain timestamp
      * @return The GIST inclusion or non-inclusion proof for the identity
      */
-    function getGISTProofByTime(
+    /*function getGISTProofByTime(
         uint256 id,
         uint256 timestamp
     ) external view returns (IState.GistProof memory) {
         return _smtProofAdapter(_gistData.getProofByTime(PoseidonUnit1L.poseidon([id]), timestamp));
-    }
+    }*/
 
     /**
      * @dev Retrieve GIST latest root.
@@ -297,7 +297,7 @@ contract State is Ownable2StepUpgradeable, IState {
      * @param length Length of the root history
      * @return Array of GIST roots infos
      */
-    function getGISTRootHistory(
+    /*function getGISTRootHistory(
         uint256 start,
         uint256 length
     ) external view returns (IState.GistRootInfo[] memory) {
@@ -308,7 +308,7 @@ contract State is Ownable2StepUpgradeable, IState {
             result[i] = _smtRootInfoAdapter(rootInfos[i]);
         }
         return result;
-    }
+    }*/
 
     /**
      * @dev Retrieve the length of the GIST root history.
